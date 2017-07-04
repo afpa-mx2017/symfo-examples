@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+
+
+
+{% block body %}
+    <p>Exemple d'utilisation de symfony.
+        
+
+
+    <a href="{{path('page1', {'name': 'toto'})}}">page1 via twig</a>
+    
+    <a href="{{path('page2', {'name': 'titi'})}}">page2 sans twig</a>
+    
+    <a href="{{path('testbdd')}}">page2, exemple de bdd sans ORM</a>
+    
+{% endblock %}
+
+

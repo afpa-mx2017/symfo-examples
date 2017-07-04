@@ -1,0 +1,12 @@
+services:
+
+  pdo:
+    class: PDO
+    arguments:
+        - "%bdd_url%"
+        
+
+  filmdao:
+    class: AppBundle\Model\Dao\FilmDAO
+    arguments: ["@pdo"]
+    
