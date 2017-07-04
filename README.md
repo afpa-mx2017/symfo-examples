@@ -1,4 +1,4 @@
 symfo1
 ======
 
-A Symfony project created on July 4, 2017, 9:14 am.
+Example d'utilisation de Symfony avec, sans Template Twig, sans doctrine
