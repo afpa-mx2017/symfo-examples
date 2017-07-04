@@ -7,6 +7,7 @@
 /var/cache/*
 !var/cache/.gitkeep
 !/var/logs
+!/var/data
 /var/logs/*
 !var/logs/.gitkeep
 !/var/sessions
