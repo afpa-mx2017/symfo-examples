@@ -5,7 +5,7 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+use \AppBundle\Model\Film;
 
 class DefaultController extends Controller
 {
@@ -43,12 +43,30 @@ class DefaultController extends Controller
     }
     
     
+    
+    
     /**
-     * exemple d'appel bdd en utilisant des services (pas d'orm
-     * @Route("/testbdd", name="testbdd")
+     * @Route("/film", name="film_array")
      */
-    public function testBDD(){
+    public function indexArrayAction(){
         $films = $this->get('filmdao')->findAll();
         return $this->render('default/film-list.html.php', array('films' => $films));
     }
+    
+    /**
+     * @Route("/film2", name="film_object")
+     */
+    public function indexObjectAction(){
+        $films = $this->get('filmdao')->findAllObjects();
+        return $this->render('default/film-list.html.twig', array('films' => $films));
+    }
+    
+    /**
+     * @Route("/film3", name="film_object2")
+     */
+    public function indexObject2Action(){
+        $films = $this->get('filmdao')->findAllObjects2();
+        return $this->render('default/film-list2.html.twig', array('films' => $films));
+    }
+    
 }

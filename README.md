@@ -1,4 +1,6 @@
 symfo1
 ======
 
-Example d'utilisation de Symfony avec, sans Template Twig, sans doctrine
+Exemple d'utilisation de Symfony avec et sans Template Twig, sans doctrine.
+utilisation de services DAO
+bdd: sqlite

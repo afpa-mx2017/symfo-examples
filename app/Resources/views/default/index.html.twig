@@ -6,14 +6,16 @@
 {% block body %}
     <p>Exemple d'utilisation de symfony.
         
+    <ul>
 
-
-    <a href="{{path('page1', {'name': 'toto'})}}">page1 via twig</a>
+        <li><a href="{{path('page1', {'name': 'toto'})}}">page1 via twig</a></li>
     
-    <a href="{{path('page2', {'name': 'titi'})}}">page2 sans twig</a>
+    <li><a href="{{path('page2', {'name': 'titi'})}}">page2 sans twig</a></li>
     
-    <a href="{{path('testbdd')}}">page2, exemple de bdd sans ORM</a>
-    
+    <li><a href="{{path('film_array')}}">test avec bdd et tableau associatif et sans twig</a></li>
+    <li><a href="{{path('film_object')}}">test avec bdd et objet auto-construit</a></li>
+    <li><a href="{{path('film_object2')}}">test avec bdd et objet a la mano</a></li>
+    </ul>
 {% endblock %}
 
 
